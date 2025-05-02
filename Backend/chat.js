@@ -8,10 +8,17 @@ const client=new OpenAI(
     }
 );
 
+
+const apiresponse=async()=>{
+
 const responses=await client.responses.create({
     model:"gpt-4",
     input:"Write a one sentence bedtime story about a unicorn"
 })
 
-console.log(responses.output_text);
+ res.json(responses.output_text);
+}
+
+
+export default apiresponse;
 
