@@ -9,6 +9,11 @@ export default function Home() {
      settitle(e.target.value);
   
   }
+
+  const handlesubmit=(e)=>{
+    e.preventDefault();
+    console.log("topic submited ");
+  }
   return (
     <div className='h-screen text-white  bg-black'>
         <div className='text-center '>
@@ -20,8 +25,10 @@ export default function Home() {
 
         <h2 className='text-2xl font-bold' > <TextGenerateEffect words={words}/></h2>
         <div className='flex justify-center items-center gap-2'>
+          <form action="" onSubmit={handlesubmit}>
         <input type="text" name="" id="" placeholder='chat with AI' className='bg-gray-100 border-4 rounded-xl w-100 h-12 p-2 text-black'  value={title} onChange={handlechange}/>
-        <i className="fa-solid fa-circle-up text-3xl  cursor-pointer"></i>
+        <button type='submit'><i className="fa-solid fa-circle-up text-3xl  cursor-pointer"></i></button>
+        </form>
         </div>
         </div>
     </div>
