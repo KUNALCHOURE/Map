@@ -1,18 +1,26 @@
 import React from 'react'
 import { useState } from 'react';
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import axios from 'axios'
 const words = `Whats in your mind?`;
 export default function Home() {
   const[title ,settitle]=useState("");
+  const[result,setresult]=useState("");
 
   const handlechange=(e)=>{
      settitle(e.target.value);
   
   }
 
-  const handlesubmit=(e)=>{
+  const handlesubmit=async(e)=>{
     e.preventDefault();
-    console.log("topic submited ");
+    const s= await axios.post("http://localhost:3000/",{title:"WEB DEV"},{
+      headers: {
+        "Content-Type": "application/json"
+     }
+    })
+    .then(response=>console.log(response.data));
+    console.log(s);
   }
   return (
     <div className='h-screen text-white  bg-black'>

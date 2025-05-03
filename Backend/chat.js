@@ -11,6 +11,7 @@ const client=new OpenAI(
 
 const apiresponse=async(req,res)=>{
 try {
+    console.log("in controllers")
     let {title}=req.body;
     const responses=await client.responses.create({
         model:"gpt-4",
