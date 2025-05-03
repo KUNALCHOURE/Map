@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import apiresponse from "./chat";
+import apiresponse from "./chat.js";
 
 const app=express();
 dotenv.config();

@@ -9,14 +9,19 @@ const client=new OpenAI(
 );
 
 
-const apiresponse=async()=>{
+const apiresponse=async(req,res)=>{
+try {
+    let {title}=req.body;
+    const responses=await client.responses.create({
+        model:"gpt-4",
+        input:`${title}`
+    })
+    res.json(responses.output_text); 
+} 
+catch (error) {
+    console.log("error while generation response")
+}
 
-const responses=await client.responses.create({
-    model:"gpt-4",
-    input:"Write a one sentence bedtime story about a unicorn"
-})
-
- res.json(responses.output_text);
 }
 
 
