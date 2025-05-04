@@ -17,6 +17,7 @@ try {
         model:"gpt-4",
         input:`${title}`
     })
+    console.log(responses);
     res.json(responses.output_text); 
 } 
 catch (error) {

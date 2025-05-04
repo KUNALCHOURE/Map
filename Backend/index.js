@@ -8,7 +8,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-   origin:"http://localhost:5173/"
+   origin:"http://localhost:5173"
 }));
 
 
@@ -16,7 +16,7 @@ app.get("/",(req,res)=>{
 res.send("hello ");
 })
 
-app.post("/",apiresponse);
+app.post("/chat",apiresponse);
 
 
 app.listen(3000,()=>{
