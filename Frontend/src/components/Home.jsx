@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import axios from 'axios'
+import axios from 'axios';
 const words = `Whats in your mind?`;
 export default function Home() {
   const[title ,settitle]=useState("");
@@ -14,7 +14,7 @@ export default function Home() {
 
   const handlesubmit=async(e)=>{
     e.preventDefault();
-    const s= await axios.post("http://localhost:3000/",{title:"WEB DEV"},{
+    const s= await axios.post("http://localhost:3000/chat",{title:"WEB DEV"},{
       headers: {
         "Content-Type": "application/json"
      }
