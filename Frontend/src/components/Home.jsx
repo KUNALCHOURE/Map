@@ -6,7 +6,7 @@ import Information from './Information';
 const words = `Whats in your mind?`;
 export default function Home() {
   const[title ,settitle]=useState("");
-  const[result,setresult]=useState("");
+  const[result,setresult]=useState("roadmap");
 
   const handlechange=(e)=>{
      settitle(e.target.value);
@@ -28,7 +28,7 @@ export default function Home() {
    
   }
   return (
-    (result?
+    (result?<Information title={title} roadmap={result}/>:
     <div className='h-screen text-white  bg-black'>
         <div className='text-center '>
           <h1 className='text-4xl font-bold '>Roadmap Generetor</h1>
@@ -45,8 +45,8 @@ export default function Home() {
         </form>
         </div>
         </div>
-    </div>:
-    <Information/>
+    </div>
+    
     )
     
   )
