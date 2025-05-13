@@ -6,7 +6,7 @@ import Information from './Information';
 const words = `Whats in your mind?`;
 export default function Home() {
   const[title ,settitle]=useState("");
-  const[result,setresult]=useState("roadmap");
+  const[result,setresult]=useState("");
 
   const handlechange=(e)=>{
      settitle(e.target.value);
