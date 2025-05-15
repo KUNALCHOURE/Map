@@ -40,7 +40,7 @@ export default function Home() {
         <h2 className='text-2xl font-bold' > <TextGenerateEffect words={words}/></h2>
         <div className='items-center gap-2 w-full'>
           <form action="" onSubmit={handlesubmit} className='flex flex-row gap-2 justify-center align-center'>
-        <input type="text" name="" id="" placeholder='chat with AI' className='bg-gray-100 border-4 rounded-xl w-1/2 h-12 p-4 text-black focus:outline-none focus:ring-2 focus:ring-blue-500'  value={title} onChange={handlechange}/>
+        <input type="text" name="" id="" placeholder='Write the Topic' className='bg-gray-100 border-4 rounded-xl w-1/2 h-12 p-4 text-black focus:outline-none focus:ring-2 focus:ring-blue-500'  value={title} onChange={handlechange}/>
         <button type='submit'><i className="fa-solid fa-circle-up text-3xl  cursor-pointer"></i></button>
         </form>
         </div>
