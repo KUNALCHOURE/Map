@@ -25,3 +25,7 @@ An AI-powered **Roadmap Generator** that helps you build personalized learning p
 - **Frontend:** React, Tailwind CSS, Font Awesome
 - **Backend (assumed):** Node.js + Express + OpenAI/Gemini API (adjust based on your stack)
 - **HTTP Client:** Axios
+
+
+## Screenshots
+![Image](https://github.com/user-attachments/assets/6996ca06-c7e5-4510-bdba-df3e06deb68e)
